@@ -1,0 +1,380 @@
+@font-face {
+font-family: ProximaNova;
+src: url(../fonts/ProximaNova-Regular.otf);
+}
+@font-face {
+font-family: ProximaNovaBold;
+src: url(../fonts/Proxima-Nova-Bold.otf);
+font-weight: bold;
+}
+@font-face {
+font-family: LatoBold;
+src: url(../fonts/Lato-Bold.ttf);
+}
+@font-face {
+font-family: Lato;
+src: url(../fonts/Lato-Regular.ttf);
+}
+h1{
+  font-family: ProximaNovaBold;
+  font-size: 70px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+h2{
+  font-family: ProximaNovaBold;
+  font-size: 40px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+h3{
+  font-family: ProximaNovaBold;
+  font-size: 30px;
+  text-align: center;
+}
+h6{
+  font-family: Lato;
+  font-size: 14px;
+  text-align: center;
+
+}
+p{
+  font-family: Lato;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.contenedor{
+  margin: 0 auto;
+  width: 100%;
+}
+.logo img{
+  width: 260px;
+  display: block;
+  margin: 15px auto;
+
+}
+nav ul li a{
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  font-family: ProximaNovaBold;
+  font-weight: bold;
+  font-size: 18px;
+}
+nav ul li:hover{
+  background-color: black;
+}
+nav ul li {
+  width: 100%;
+  height: 40px;
+  background-color: #004e1e;
+  margin-bottom: 5px;
+  box-sizing: border-box;
+  text-align: center;
+  padding-top: 12px;
+
+}
+.redes{
+  display: none;
+}
+.videoFondo{
+  display: none;
+}
+.fotoMobile img{
+  width: 100%;
+}
+.historia{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 40px;
+}
+.h2 h2{
+  width: 100%;
+  margin: 0px auto;
+  margin-bottom: 40px;
+  border-bottom: solid 7px black;
+  width: 228px;
+  padding-bottom: 5px;
+}
+.cervezas img{
+  width: 100%;
+  display: block;
+  margin: 15px auto;
+}
+.contactoGlobal{
+  width: 90%;
+  margin: 0px auto;
+}
+.contacto h1{
+  width: 100%;
+  margin: 0 auto;
+  border-bottom: solid 7px black;
+  width: 300px;
+  padding-bottom: 5px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.contacto img{
+  width: 40px;
+  padding-top: 10px;
+}
+.contacto p{
+
+}
+.beneficios{
+  display: block;
+  width: 100%;
+  height: 40px;
+  margin: 0 auto;
+  background-color: black;
+  font-style: 20px;
+  padding-top: 15px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.beneficios a{
+  text-decoration: none;
+  color: white;
+}
+.mapa img{
+  width: 100%;
+}
+.registro{
+  margin-top: 70px;
+}
+form{
+  display: flex;
+  justify-content: center;
+  font-family: Lato;
+  font-size: 30px;
+}
+form input{
+  width: 200px;
+  height: 20px;
+  border-radius: 10px;
+}
+form input:hover{
+  border-color: cyan;
+}
+form button{
+  font-family: Lato;
+  font-size: 20px;
+  height: 50px;
+  width: 100px;
+  margin-top: 10px;
+  border-radius: 15px;
+}
+footer{
+  background: #c7c9cc;
+}
+footer .contenedor{
+  margin-top:20px;
+  text-align: center;
+
+}
+.redes2 .social li{
+  display: inline-block;
+  margin: 20px;
+}
+.redes2 .social li img{
+  width: 50px;
+}
+.copy{
+  padding-top: 25px;
+}
+@media (min-width: 1200px) {
+  .contenedor{
+    width: 1180px;
+    margin: 0 auto;
+  }
+  .loQueVaFixed{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  .rubros{
+    margin-left: 200px;
+    padding-top: 113px;
+  }
+  .rubros li{
+    width: 120px
+  }
+  .rubros ul li {
+    display: inline-block;
+  }
+
+  .redes{
+    display: inline-block;
+    padding-top: 113px;
+  }
+  .redes .social li{
+    display: inline-block;
+  }
+  .redes .social li img{
+    width: 50px;
+  }
+  .fotoMobile{
+    display: none;
+  }
+  .videoFondo{
+    display: block;
+  }
+  .historia{
+    border-top: solid 2px black;
+    margin-top: 85px;
+  }
+  .cervezas{
+    display: flex;
+
+  }
+  .cervezas img{
+    width: 313px;
+    height: 293px;
+  }
+  .cervezas{
+    display: flex;
+    flex-direction: column;
+  }
+  .cervezas .fila1{
+    display: flex;
+    justify-content: space-around;
+  }
+  .cervezas .fila2{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 60px;
+  }
+
+  .ipa img{
+    display: none;
+  }
+  .porter img{
+    display: none;
+  }
+  .stout img{
+    display: none;
+  }
+  .pilsener img{
+    display: none;
+  }
+  .amber img{
+    display: none;
+  }
+  .honey img{
+    display: none;
+  }
+
+  .ipa{
+    width: 313px;
+    height: 293px;
+    background-image: url("../imagenes/ipa.png");
+    overflow: hidden;
+  }
+  .porter{
+    width: 313px;
+    height: 293px;
+    background-image: url("../imagenes/porter.png");
+    overflow: hidden;
+  }
+  .stout{
+    width: 313px;
+    height: 293px;
+    background-image: url("../imagenes/stout.png");
+    overflow: hidden;
+  }
+  .pilsener{
+    width: 313px;
+    height: 293px;
+    background-image: url("../imagenes/pilsener.png");
+    overflow: hidden;
+  }
+  .amber{
+    width: 313px;
+    height: 293px;
+    background-image: url("../imagenes/amberlager.png");
+    overflow: hidden;
+  }
+  .honey{
+    width: 313px;
+    height: 293px;
+    background-image: url("../imagenes/honey.png");
+    overflow: hidden;
+  }
+
+  .ipa .textoBirra{
+    padding-top: 80px;
+    color: rgba(0,0,0,0);
+  }
+  .ipa .textoBirra:hover{
+    color: rgb(213, 220, 232);
+  }
+  .porter .textoBirra{
+    padding-top: 80px;
+    color: rgba(0,0,0,0);
+  }
+  .porter .textoBirra:hover{
+    color: rgb(213, 220, 232);
+  }
+  .stout .textoBirra{
+    padding-top: 80px;
+    color: rgba(0,0,0,0);
+  }
+  .stout .textoBirra:hover{
+    color: rgb(213, 220, 232);
+  }
+  .pilsener .textoBirra{
+    padding-top: 80px;
+    color: rgba(0,0,0,0);
+  }
+  .pilsener .textoBirra:hover{
+    color: rgb(213, 220, 232);
+  }
+  .amber .textoBirra{
+    padding-top: 80px;
+    color: rgba(0,0,0,0);
+  }
+  .amber .textoBirra:hover{
+    color: rgb(213, 220, 232);
+  }
+  .honey .textoBirra{
+    padding-top: 80px;
+    color: rgba(0,0,0,0);
+  }
+  .honey .textoBirra:hover{
+    color: rgb(213, 220, 232);
+  }
+  .contactoGlobal{
+    display: flex;
+    justify-content: space-around;
+  }
+  .contacto p{
+    text-align: left;
+  }
+  .beneficios p{
+    text-align: center;
+  }
+
+  .contacto img{
+    width: 50px;
+    margin: 0 auto;
+  }
+  .mapa{
+    padding-top: 110px;
+  }
+  .formularios{
+    display: flex;
+    justify-content: space-around;
+  }
+  .formularios .login .h1{
+    width: 100%;
+    margin: 0px auto;
+    margin-bottom: 40px;
+    border-bottom: solid 7px black;
+    width: 228px;
+    padding-bottom: 2px;
+  }
+  footer{
+    margin-bottom: 20px;
+  }
+}
