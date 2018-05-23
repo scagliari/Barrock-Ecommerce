@@ -1,0 +1,382 @@
+@media (min-width: 1200px) {
+
+
+
+  body {
+    background-color: white;
+    text-align: left;
+  }
+
+  #titulopreguntasfrecuentes h1{
+    font-size: 40px;
+    width: 496px;
+  }
+
+  .mapa img{
+    display: block;
+    width: 800px;
+  }
+
+  nav {
+    height: 88px;
+    background-color: #004e1e;
+    padding:0;
+  }
+
+  nav ul li {
+    height: 88px;
+    padding-top: 33px;
+  }
+
+  .logo img {
+    width: 118px;
+    margin: 0 0 0 50px;
+  }
+
+  h1 {
+    font-size: 30px;
+    margin: 0px auto;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .h2 h1 {
+    width: 225px;
+  }
+
+  .contenedor {
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  .contenedorcontacto {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  .loQueVaFixed {
+    display: flex;
+    justify-content: space-between;
+    background-color: #004e1e;
+    align-items: center;
+  }
+
+  .rubros {
+    margin-left: 150px;
+    padding-top: 0px;
+    box-sizing: border-box;
+  }
+
+  .rubros li {
+    width: 120px
+  }
+
+  .rubros ul li {
+    display: inline-block;
+  }
+
+  .redes{
+    display: inline-block;
+    background-color: #004e1e;
+    padding-top: 17px;
+    height: 88px;
+    box-sizing: border-box;
+  }
+
+  .redes .social li{
+    display: inline-block;
+  }
+
+  .redes .social li img{
+    width: 50px;
+  }
+
+
+  div .videoFondo {
+    position: static;
+    display: block;
+    height: 540px;
+
+  }
+
+  .video {
+    position: relative;
+  }
+
+  .textovideo {
+    position: relative;
+    bottom: 350px;
+    margin: 0px auto;
+    color: white;
+    border: solid 3px white;
+    width: 550px;
+
+  }
+
+  .textovideo1 {
+    font-size: 50px;
+    text-shadow: 2px 2px black;
+    margin: 20px auto;
+    text-align: center;
+  }
+
+  div .bannercontacto {
+    height: 620px;
+  }
+
+  .fotocontacto {
+    position: relative;
+
+  }
+
+  .textocontacto {
+    position: relative;
+    bottom: 450px;
+    margin: 0px auto;
+    color: white;
+    border: solid 3px white;
+    width: 600px;
+  }
+
+
+
+
+
+  video {
+    width: 100%
+  }
+
+  .fotoportada {
+    width: 100%;
+    height: 400px;
+    background-color: black;
+    margin-bottom: 50px;
+  }
+
+.contenedorpreguntas {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px auto;
+  width: 90%;
+}
+
+  .preguntas {
+    width: 50%;
+  }
+
+  .imagenpreguntas {
+    width: 50%;
+    display: block;
+  }
+
+  .cervezas{
+    display: flex;
+    background-color: #3F4140;
+    padding: 40px 0px;
+
+  }
+  .cervezas img{
+    width: 313px;
+    height: 293px;
+  }
+  .cervezas{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .cervezas .fila1{
+    display: flex;
+    justify-content: space-around;
+  }
+  .cervezas .fila2{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+  }
+
+  .margen {
+    width: 80%;
+    margin: 0px auto;
+  }
+
+  .ipa img{
+    display: none;
+  }
+  .porter img{
+    display: none;
+  }
+  .stout img{
+    display: none;
+  }
+  .pilsener img{
+    display: none;
+  }
+  .amber img{
+    display: none;
+  }
+  .honey img{
+    display: none;
+  }
+
+  .ipa{
+    width: 300px;
+    height: 353px;
+    background-image: url("../imagenes/barrockventa1.png");
+    overflow: hidden;
+  }
+  .porter{
+    width: 300px;
+    height: 353px;
+    background-image: url("../imagenes/barrockventa2.png");
+    overflow: hidden;
+  }
+  .stout{
+    width: 300px;
+    height: 353px;
+    background-image: url("../imagenes/barrockventa3.png");
+    overflow: hidden;
+  }
+  .pilsener{
+    width: 300px;
+    height: 353px;
+    background-image: url("../imagenes/barrockventa4.png");
+    overflow: hidden;
+  }
+  .amber{
+    width: 300px;
+    height: 353px;
+    background-image: url("../imagenes/barrockventa5.png");
+    overflow: hidden;
+  }
+
+  .honey{
+    width: 300px;
+    height: 353px;
+    background-image: url("../imagenes/barrockventa6.png");
+    overflow: hidden;
+  }
+
+  .textoBirra{
+    padding: 20px 20px;
+    color: rgba(0,0,0,0);
+    height: 353px;
+    box-sizing: border-box;
+  }
+
+
+
+  .textoBirra:hover{
+    color: rgb(213, 220, 232);
+    background-color: black;
+    opacity: 0.8;
+  }
+
+  #descripcionBirra {
+    line-height: 20px;
+  }
+
+
+  .contactoGlobal{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+  }
+  .contacto p{
+    text-align: left;
+    display: inline-block;
+  }
+  .beneficios p{
+    text-align: center;
+  }
+
+  .contacto img{
+    width: 40px;
+    margin-right: 20px;
+    padding: 0;
+    display: inline-block;
+  }
+
+  .seccioncontacto{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+  }
+
+  .login {
+    width: 50%;
+
+  }
+
+  .formularios{
+    width: 100%;
+    display: flex;
+    align-content: space-between;
+
+      }
+
+  .registro {
+    width: 40%;
+  }
+
+  .imagenregistro {
+    display: block;
+    width: 60%;
+  }
+
+  .formularios .login .h1 {
+    width: 100%;
+    margin: 0px auto;
+    margin-bottom: 40px;
+    border-bottom: solid 7px black;
+    width: 228px;
+    padding-bottom: 2px;
+  }
+
+
+  .historia {
+  display: flex;
+  justify-content: space-between;
+  }
+
+  .historiatexto {
+    width: 50%;
+  }
+
+  .historiaimagen {
+    display: block;
+    width: 45%;
+  }
+
+  .copy2 {
+    display: block;
+    color: white;
+    width: 600px;
+    text-align: center;
+    font-style: italic;
+  }
+
+  iframe {
+   width: 700px;
+   height: 500px;
+  }
+  footer{
+    margin: 0px 0px;
+    padding: 20px 0px;
+  }
+
+  .textocontacto {
+    display: block;
+  }
+
+  input {
+  display: block;
+  margin: 10px 0px;
+  width: 100%;
+  }
+
+}

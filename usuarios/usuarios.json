@@ -1,0 +1,11 @@
+{
+    "usuarios": [
+        {
+            "nombre": "Santiago Mar\u00eda Cagliari",
+            "email": "santiago.cagliari@gmail.com",
+            "password": "$2y$10$.3Hxil8Yrq0Alr6fKvfmz.ve2jCabzVyFeiqOH.xqmxhIAXLmfdNK",
+            "id": 1,
+            "imagen": ".\/avatar\/perfil_santiago.cagliari@gmail.com.jpg"
+        }
+    ]
+}
