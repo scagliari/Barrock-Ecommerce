@@ -1,9 +1,8 @@
 <?php
+session_start();
 
 require_once "funciones.php";
-include "conexion.php";
-
-session_start();
+require_once "conexion.php";
 
 if (existeParametro('usuario',$_SESSION)) {
   header("Location: indexingresado.html");
@@ -31,41 +30,32 @@ if (existeParametro('submit', $_POST)) {
         'id' => $infoUsuario['proximoId']+1,
         'imagen' => guardarAvatar('imagen')
       ]);
+
+
+      //Acá vamos a incluir todo dentro de una base de datos
+      global $db;
+      // Preparo un stmt de tipo INSERT
+      $stmt = $db->prepare('INSERT INTO usuarios
+          (Nombre_Apellido, email, contraseña)
+          VALUES (:username, :email, :password)');
+
+      // Bindeo los valores
+      $stmt->bindValue(":username", $_POST['nombre']);
+      $stmt->bindValue(":email", $_POST['email']);
+      $stmt->bindValue(":password", $_POST['password']);
+      // Ejecuto el stmt
+      $stmt->execute();
+
+      //Macheo el nombre que me llega por Post con usuarios SESSION
+      $_SESSION['usuario'] = $_POST['nombre'];
+      //Si está todo bien redirijo a la página de bienvenido
       header("Location: bienvenido.php");
       exit;
     }
   } else {
     $error = true;
   }
-
-// Uso $db para Insertar un nuevo usuario en mi base
-  global $db;
-// Preparo un stmt de tipo INSERT
-$insert = 'INSERT INTO usuarios (NombreyApellido, email, contraseña)
-VALUES (:username, :email, :password)';
-
-  $stmt = $db->prepare($insert);
-//defino variables dentro del ámbito local
-$usuario = [
-  "nombre" => $_POST['nombre'],
-  "email" => $_POST['email'],
-  "password" => $_POST['password'],
-];
-  // Bindeo los valores
-  $stmt->bindValue(":username", $usuario["nombre"]);
-  $stmt->bindValue(":email", $usuario["email"]);
-  $stmt->bindValue(":password", $usuario["password"]);
-
-  // Ejecuto el stmt
-  $stmt->execute();
-  // Obtengo el ID insertado
-  $userId = $db->lastInsertId();
-  // Retornar el ID
-  return $userId;
-var_dump($userId);
-
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -74,8 +64,9 @@ var_dump($userId);
     <meta charset="utf-8">
     <link rel="stylesheet" href="http://meyerweb.com/eric/tools/css/reset/reset.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/style.css"> <!-- este archivo css lo hice para porque el logo es gigante y necesitaba achicarlo un poco-->
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/styledesktop.css">
+
     <title>Barrock Brewery</title>
     <link rel="shortcut icon" href="imagenes/barrockfavicon.png">
   </head>
@@ -109,46 +100,43 @@ var_dump($userId);
             <div class="registro">
               <h1>REGISTRATE Y OBTENÉ <br>INCREIBLES BENEFICIOS</h1>
               <form role="form" action="" method="post" enctype="multipart/form-data">
-           		<div class="ingreso">
-           		</div><div class="form-group col-sm-6">
+           		<div class="ingreso"></div>
+              <div>
            			<?php if($error && array_key_exists('existe', $infoUsuario) && $infoUsuario['existe']): ?>
-                         <span style="color: red; font-size: 16px;">Ya existe un usuario con ese E-mail</span>
+                         <div style="color: red; font-size: 16px;">Ya existe un usuario con ese E-mail</div>
                        <?php endif; ?>
                        <?php if($error && !$nombre):?>
-                 				<span style="color: red; font-size: 16px;"> Ingresar un nombre y apellido</span>
+                 				<div style="color: red; font-size: 16px;"> Ingresar un nombre y apellido</div>
+                 			<?php elseif ($error && strlen($nombre) < 10): ?>
+                 				<div style="color: red; font-size: 16px;">El Nombre y Apellido es demasiado corto</div>
                  			<?php endif; ?>
-                 		<?php if($error && strlen($nombre) < 10):?>
-                 				<span style="color: red; font-size: 16px;">El Nombre y Apellido es demasiado corto</span>
-                 			<?php endif; ?>
-           			<label>Nombre y Apellido</label><br><input type="text" class="form-control" name="nombre" required>
+           			<label>Nombre y Apellido</label><br><input type="text" name="nombre" >
            			</div>
-           		<div class="form-group col-sm-6">
+           		<div>
            			<?php if($error && !$email):?>
-                 				<span style="color: red; font-size: 16px;">  Ingresar email</span>
+                 				<div style="color: red; font-size: 16px;">Ingresar email</div>
                  			<?php endif; ?>
-           			<label>Email</label><br><input type="Email" class="form-control" name="email" required>
+           			<label>Email</label><br><input type="Email" name="email" >
            		</div>
-           		<div class="form-group col-sm-6">
+           		<div>
            			<?php if($error && !$password):?>
-                 				<span style="color: red; font-size: 16px;">Ingresar contraseña</span>
+                 				<div style="color: red; font-size: 16px;">Ingresar contraseña</div>
                  			<?php endif; ?>
-           			<label>Contraseña</label><br><input name="password" type="password" class="form-control" required>
+           			<label>Contraseña</label><br><input name="password" type="password" >
            		</div>
-           		<div class="form-group col-sm-6">
-           			<?php if($error && !$password2):?>
-                 				<span></span>
+           		<div>
+
+                 		<?php if($error && ($password2 != $password)):?>
+                 				<div style="color: red; font-size: 16px;">Las contraseñas deben ser iguales</div>
                  			<?php endif; ?>
-                 		<?php if($error && ($password2 || $password)):?>
-                 				<span style="color: red; font-size: 16px;">Las contraseñas deben ser iguales</span>
-                 			<?php endif; ?>
-           			<label>Confirmar Contraseña</label><br><input name="password2" type="password" class="form-control" required>
+           			<label>Confirmar Contraseña</label><br><input name="password2" type="password" >
 
            		</div>
            		<div class="form-group">
            					<label>Foto</label><br>
            					<div>
            						<?php if($error && !$existeFile):?>
-                 					<span style="color: red; font-size: 16px;">Ingresar un Avatar</span>
+                 					<div style="color: red; font-size: 16px;">Ingresar un Avatar</div>
                  			<?php endif; ?>
            						<input type="file" name="imagen">
            					</div>

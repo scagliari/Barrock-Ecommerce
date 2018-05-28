@@ -1,15 +1,9 @@
 <?php
-
+session_start();
 include('funciones.php');
 
-	session_start();
 
-	if (!existeParametro('usuario',$_SESSION)) {
-		header("Location: inicio.php");
-		exit;
-	}
 
-	$usuario = $_SESSION['usuario'];
 ?>
 
 <!DOCTYPE html>
@@ -43,7 +37,7 @@ include('funciones.php');
           <div class="redes">
                 <ul class="social">
                   <li><a href="http://www.twitter.com" target="_blank"><img src="imagenes/icono-tw.svg" alt=""></a></li>
-                  <li><a href="http://www.instagram.com" target="_blank"><img src="imagenes/icono-ig.svg" alt=""></a></li>
+                  <li><a href="http://[www.instagram.com" target="_blank"><img src="imagenes/icono-ig.svg" alt=""></a></li>
                   <li><a href="http://www.facebook.com" target="_blank"><img src="imagenes/icono-fb.svg" alt=""></a></li>
                 </ul>
               </div>
@@ -55,7 +49,8 @@ include('funciones.php');
               <div class="h2">
                 <h1>BIENVENIDO</h1>
               </div>
-              <p><?= $usuario['nombre'] ?>:</p><p> Gracias por registrarte en nuestro sitio y decidir formar parte de esta gran familia.
+							<p><?php echo $_SESSION['usuario']; ?>:</p>
+              <p> Gracias por registrarte en nuestro sitio y decidir formar parte de esta gran familia.
               Como la familia es lo que más importa, tenemos grandes beneficios para ofrecerte. </p>
               <h3>DESCUENTOS SEMANALES</h3>
               <p>Seguinos en nuestras redes y enterate de todos los descuentos

@@ -26,6 +26,7 @@ include('funciones.php');
           } else {
             setcookie('email',$email, time()-60);
           }
+					$_SESSION['usuario'] = $infoUsuario['usuario']['nombre'];
           header("Location: bienvenido.php");
           exit;
         } else {
@@ -99,13 +100,13 @@ var_dump($primerusuario['username']);*/
 
 
 	                      <?php if($error && array_key_exists('existe', $infoUsuario) && !$infoUsuario['existe']): ?>
-	                        <span  style="padding-bottom: 10px; font-size: 16px; background-color: #ffd8d8; color: red; width: 100%;"><i></i> Usuario no registrado</span>
+	                        <span  style="padding: 5px 5px; font-size: 16px; background-color: #ffd8d8; color: red; width: 100%;"><i></i> Usuario no registrado</span>
 	                      <?php endif; ?>
 	                      <?php if($error && $passwordError): ?>
-	                        <span style="padding-bottom: 10px; font-size: 16px; background-color: #ffd8d8; color: red; width: 100%;"><i></i> Contraseña incorrecta</span>
+	                        <span style="padding: 5px 5px; font-size: 16px; background-color: #ffd8d8; color: red; width: 100%;"><i></i> Contraseña incorrecta</span>
 	                      <?php endif; ?>
 	                      <?php if($error && !$email):?>
-	                        <span style="padding-bottom: 10px; font-size: 16px; background-color: #ffd8d8; color: red; width: 100%;"> <i></i> Ingresar un email</span>
+	                        <span style="padding: 5px 5px; font-size: 16px; background-color: #ffd8d8; color: red; width: 100%;"> <i></i> Ingresar un email</span>
 	                      <?php endif; ?>
 
 

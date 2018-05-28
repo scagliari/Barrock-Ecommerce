@@ -188,6 +188,7 @@ form input{
   width: 200px;
   height: 20px;
 
+
 }
 form input:hover{
   border-color: green;
@@ -200,6 +201,7 @@ form button{
   margin-top: 20px;
 
 }
+
 footer{
   background: black;
 }
@@ -284,3 +286,4 @@ width: 100%;
   display: flex;
   background-color: #3F4140;
   color: white;
+}
